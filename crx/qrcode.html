@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <img id="qrcode" width="200" height="200">
+    <script>
+      var QRCODE_BASE = 'https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=';
+      chrome.extension.getBackgroundPage().getCurrentURL(function(url) {
+        document.querySelector('#qrcode').src = QRCODE_BASE + encodeURIComponent(url);
+      });
+    </script>
+  </body>
+</html>
