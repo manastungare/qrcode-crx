@@ -1,6 +1,6 @@
 {
   "name": "QRCode",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Shows the current URL as a QRCode (for viewing on mobile devices).",
   "browser_action": {
     "default_title": "QRCode",
