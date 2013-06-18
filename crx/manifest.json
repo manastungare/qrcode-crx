@@ -1,13 +1,19 @@
 {
   "name": "QRCode",
-  "version": "1.0.2",
+  "version": "1.1",
+  "manifest_version": 2,
   "description": "Shows the current URL as a QRCode (for viewing on mobile devices).",
   "browser_action": {
     "default_title": "QRCode",
     "default_popup": "qrcode.html",
     "default_icon": "qrcode-19.png"
   },
-  "background_page": "background.html",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
   "permissions": [
     "tabs"
   ],
@@ -15,5 +21,6 @@
     "16": "qrcode-16.png",
     "48": "qrcode-48.png",
     "128": "qrcode-128.png"
-  }
+  },
+  "content_security_policy": "script-src 'self'; object-src https://chart.googleapis.com"
 }
